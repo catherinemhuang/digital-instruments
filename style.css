@@ -1,38 +1,38 @@
 * {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		#handshake {
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: black;
-			color: white;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-			font-family: sans-serif;
-			cursor: pointer;
-			z-index: 99999;
-		}
-		.container {
-			height: 100vh;
-			display: grid;
-			grid-template-columns: repeat(30, 1fr);
-		}
-		button {
-			border: unset;
-			background-color: lightyellow;
-			color: lightgreen;
-			border-radius: unset;
-			transition: 1.5s;
-			border-radius: 30%;
-		}
-		button:hover {
-			background-color: orange;
-			transition: 0s;
-		}
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#handshake {
+	position: fixed;
+	inset: 0;
+	background: black;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: sans-serif;
+	cursor: pointer;
+	z-index: 9999;
+}
+
+.container {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	background-color: lightgreen;
+}
+
+button {
+	border: none;
+	background: lightyellow;
+	color: lightgreen;
+	transition: 0.3s;
+	border-radius: 40%;
+}
+
+.playButton.active {
+	background: orange;
+	transform: scale(1.2);
+}
