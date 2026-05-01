@@ -7,14 +7,17 @@
 #handshake {
 	position: fixed;
 	inset: 0;
-	background: black;
+	background: green;
 	color: white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: sans-serif;
+	font-family: serif;
 	cursor: pointer;
 	z-index: 9999;
+	font-size: 50px;
+	animation: pulse 1.5s ease-in-out infinite;
+
 }
 
 .container {
@@ -35,4 +38,16 @@ button {
 .playButton.active {
 	background: orange;
 	transform: scale(1.2);
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
