@@ -1,4 +1,3 @@
-// start audio on click
 let handshake = document.querySelector("#handshake");
 
 handshake.addEventListener("click", async () => {
@@ -6,23 +5,18 @@ handshake.addEventListener("click", async () => {
 	handshake.style.display = "none";
 });
 
-// synth
 let synth = new Tone.Synth().toDestination();
 
-// notes
 let notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
 
-// all buttons
 let buttons = document.querySelectorAll(".playButton");
 
-// assign EACH button a note ONCE
 buttons.forEach(button => {
 	let randomNote = notes[Math.floor(Math.random() * notes.length)];
 	let randomOctave = Math.floor(Math.random() * 3) + 3;
 	button.dataset.note = randomNote + randomOctave;
 });
 
-// CLICK interaction
 buttons.forEach(button => {
 	button.addEventListener("click", () => {
 
@@ -32,7 +26,6 @@ buttons.forEach(button => {
 			`.playButton[data-column="${column}"]`
 		);
 
-		// OPTIONAL: reverse direction
 		columnButtons = Array.from(columnButtons);
 
 		columnButtons.forEach((btn, index) => {
